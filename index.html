@@ -3,40 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auto-Playing Flashing Video</title>
+  <title>Auto-playing Video</title>
   <style>
+    /* Style to make the video cover the entire viewport */
     body, html {
       margin: 0;
       padding: 0;
-      overflow: hidden;
       height: 100%;
     }
-
     video {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      animation: flash 2000000000000000000000000s infinite;
-    }
-
-    @keyframes flash {
-      0%, 49.9%, 100% {
-        opacity: 0;
-      }
-      50%, 99.9% {
-        opacity: 1;
-      }
+      object-fit: cover; /* Cover the entire viewport */
+      z-index: -1; /* Place the video behind other content */
     }
   </style>
 </head>
 <body>
-  <video autoplay loop muted>
-    <source src="WhatsApp Video 2024-04-30 at 3.33.19 PM.mp4">
-    Your browser does not support the video tag.
-  </video>
+
+<video src="WhatsApp Video 2024-04-30 at 3.33.19 PM.mp4" autoplay loop muted></video>
+
 </body>
 </html>
