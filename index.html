@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto-Playing Flashing Video</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: flash 2s infinite;
+    }
+
+    @keyframes flash {
+      0%, 49.9%, 100% {
+        opacity: 0;
+      }
+      50%, 99.9% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <video autoplay loop muted>
+    <source src="WhatsApp Video 2024-04-30 at 3.33.19 PM.mp4">
+    Your browser does not support the video tag.
+  </video>
+</body>
+</html>
